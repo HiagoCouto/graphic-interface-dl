@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/imgs">
+        <file>imgs/share-arrow (3).png</file>
+        <file>imgs/play-button-sing.png</file>
+    </qresource>
+</RCC>
