@@ -50,17 +50,16 @@ def plot_preds(img, preds):
     plt.tight_layout()
 
 
-def run():
+def run(imagePath):
     WIDTH = 299
     HEIGHT = 299
-
     model = load_model(inceptionV3())
 
-    img = image.load_img(input("Image: "), target_size=(HEIGHT, WIDTH))
+    img = image.load_img(imagePath, target_size=(HEIGHT, WIDTH))
     preds = predict(model, img)
 
     plot_preds(np.asarray(img), preds)
-    preds
+    return preds
 
 
 if __name__ == "__main__":

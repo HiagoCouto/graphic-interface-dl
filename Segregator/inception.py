@@ -75,9 +75,9 @@ def inceptionV3():
     STEPS_PER_EPOCH = 320
     VALIDATION_STEPS = 64
 
-    MODEL_FILE = 'filename.model'
+    MODEL_FILE = 'Segregator.model'
 
-    history = model.fit_generator(
+    model.fit_generator(
         train_generator,
         epochs=EPOCHS,
         steps_per_epoch=STEPS_PER_EPOCH,
@@ -85,3 +85,4 @@ def inceptionV3():
         validation_steps=VALIDATION_STEPS)
 
     model.save(MODEL_FILE)
+    return MODEL_FILE

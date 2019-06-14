@@ -14,3 +14,5 @@ def run_dataset(zipPath):
     data = Preparation(folderName).getInstance()
     data.train_test_move_to_dirs(data.train_test_separation
                                  (data.train_test_make_dirs()))
+
+    return folderName
